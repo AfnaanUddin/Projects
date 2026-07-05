@@ -1,0 +1,247 @@
+# Enterprise Detection Engineering Lab (Windows + Sysmon)
+
+---
+
+## 🧠 Overview
+
+This project is a hands-on Enterprise Detection Engineering Lab built using a Windows 11 virtual machine with Sysmon and Windows Security Event Logging enabled.
+
+The goal of this lab is to simulate real-world Security Operations Center (SOC) workflows by generating endpoint telemetry, analyzing system behavior, and building security detections based on real Windows events.
+
+This lab focuses on understanding how attackers generate activity on endpoints and how defenders detect, investigate, and map that behavior using industry-standard tools and frameworks.
+
+---
+
+## 🎯 Objectives
+
+- Build a realistic Windows-based SOC detection lab
+- Enable and analyze Sysmon telemetry
+- Study Windows Security Event Logs
+- Simulate user and process activity
+- Build detection logic for endpoint behavior
+- Understand attacker techniques through telemetry
+- Map detections to MITRE ATT&CK framework
+
+---
+
+## 🧪 Lab Environment
+
+- Windows 11 Virtual Machine (VMware Fusion)
+- Sysmon (Sysinternals)
+- Windows Event Viewer
+- PowerShell & Command Prompt
+- Windows Security Logs
+- Isolated lab environment
+
+---
+
+## 📊 Telemetry Sources
+
+### Windows Security Logs
+- 4624 → Successful logon
+- 4625 → Failed logon
+- 4720 → User creation
+- 4732 → Group membership change
+
+### Sysmon Logs
+- Event ID 1 → Process creation
+- Event ID 3 → Network connections
+- Event ID 7 → Image loading
+- Event ID 10 → Process access
+- Event ID 11 → File creation
+
+---
+
+# 🔍 DETECTIONS (1–10)
+
+---
+
+# 🔥 Detection #1 — Successful Logon Monitoring
+
+## Objective
+Detect successful authentication events on the system.
+
+## Event ID
+- 4624
+
+## Analysis
+Captured successful logon activity including:
+- Username
+- Logon type
+- Source machine
+- Authentication context
+
+## MITRE Mapping
+- T1078 — Valid Accounts
+
+---
+
+# 🔥 Detection #2 — Failed Logon Attempts
+
+## Objective
+Detect incorrect or malicious login attempts.
+
+## Event ID
+- 4625
+
+## Analysis
+Used to identify:
+- brute-force attempts
+- password guessing activity
+- authentication failures
+
+## MITRE Mapping
+- T1110 — Brute Force
+
+---
+
+# 🔥 Detection #3 — User Account Creation
+
+## Objective
+Detect creation of new local users.
+
+## Event ID
+- 4720
+
+## Analysis
+Used for detecting:
+- persistence mechanisms
+- unauthorized account creation
+
+## MITRE Mapping
+- T1136 — Create Account
+
+---
+
+# 🔥 Detection #4 — Privilege Escalation (Group Membership Change)
+
+## Objective
+Detect users added to privileged groups.
+
+## Event ID
+- 4732
+
+## Analysis
+Captured:
+- user added to administrators group
+- identity-based privilege escalation
+
+## MITRE Mapping
+- T1068 — Privilege Escalation
+- T1078 — Valid Accounts
+
+---
+
+# 🔥 Detection #5 — Local Group Modification Monitoring
+
+## Objective
+Monitor changes in local security groups.
+
+## Analysis
+Tracks modifications to:
+- Administrators group
+- Remote Desktop Users group
+- Other privileged groups
+
+## MITRE Mapping
+- T1098 — Account Manipulation
+
+---
+
+# 🔥 Detection #6 — Logon Session Behavior Analysis
+
+## Objective
+Analyze different types of logon sessions.
+
+## Analysis
+Covered:
+- interactive logons
+- remote logons (RDP)
+- service logons
+
+## MITRE Mapping
+- T1021 — Remote Services
+
+---
+
+# 🔥 Detection #7 — Authentication Pattern Correlation
+
+## Objective
+Correlate failed and successful login behavior.
+
+## Analysis
+Used to detect:
+- brute-force followed by success
+- unusual authentication patterns
+
+## MITRE Mapping
+- T1110 — Brute Force
+
+---
+
+# 🔥 Detection #8 — Process Execution Monitoring (Sysmon Event ID 1)
+
+## Objective
+Monitor all process execution activity on the endpoint.
+
+## Event ID
+- Sysmon Event ID 1
+
+## Analysis
+Captured process creation such as:
+- powershell.exe
+- cmd.exe
+- notepad.exe
+
+Key fields analyzed:
+- Image
+- CommandLine
+- ParentImage
+- User
+- ProcessGuid
+
+## MITRE Mapping
+- T1059 — Command and Scripting Interpreter
+
+---
+
+🔥 Detection #9 — Suspicious PowerShell Execution
+
+Objective
+
+Detect PowerShell execution using suspicious or attacker-like flags.
+
+Examples Detected
+
+* -NoProfile
+* -ExecutionPolicy Bypass
+* -WindowStyle Hidden
+
+MITRE Mapping
+
+* T1059.001 — PowerShell
+
+---
+
+🔥 Detection #10 — Parent-Child Process Analysis
+
+Objective
+
+Detect unusual process execution chains.
+
+Analysis
+
+Tracked relationships such as:
+
+* cmd.exe → powershell.exe
+* explorer.exe → powershell.exe
+* winword.exe → powershell.exe
+
+Why it matters
+
+Attackers frequently use trusted processes to launch malicious payloads.
+
+MITRE Mapping
+
+* T1059 — Command Execution
+* T1204 — User Execution
