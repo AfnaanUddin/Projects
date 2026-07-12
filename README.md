@@ -54,11 +54,12 @@ Responsibilities included user onboarding support, communication planning, troub
 
 The goal of this repository is to demonstrate:
 
-* Real-world SOC and security operations workflows
-* Enterprise endpoint security and identity management experience
-* Practical exposure to large-scale security deployments
-* SIEM and EDR-based investigation skills
-* Ability to document and communicate technical security work clearly
+- Real-world SOC and security operations workflows
+- Enterprise endpoint security and identity management experience
+- Detection engineering and threat investigation capabilities
+- SIEM and EDR-based investigation skills
+- Practical exposure to large-scale security deployments
+- Ability to document and communicate technical security work clearly
 
 ---
 
