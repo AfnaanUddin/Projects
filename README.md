@@ -20,6 +20,8 @@ Built a Windows-based security lab using Sysmon and Windows Event Logs to simula
 
 Each detection involved generating endpoint telemetry, analyzing security events, investigating attacker behavior, mapping techniques to MITRE ATT&CK, and documenting detection logic, investigation workflows, false positives, and response actions.
 
+---
+
 ### 🔐 Windows 11 Upgrade & Endpoint Security Compliance Project
 
 Large-scale endpoint modernization initiative involving 100+ corporate devices. The project focused on identifying Windows 10 systems, validating hardware readiness (TPM, Secure Boot), and upgrading devices to Windows 11 to improve security compliance and reduce risk exposure.
