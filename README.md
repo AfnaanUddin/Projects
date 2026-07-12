@@ -12,6 +12,14 @@ The goal of this portfolio is to demonstrate practical experience working with e
 
 ## Projects Included
 
+### 🔎 Enterprise Detection Engineering Lab – Windows | Sysmon | MITRE ATT&CK
+
+Hands-on detection engineering project focused on understanding how enterprise SOC teams detect and investigate attacker behavior.
+
+Built a Windows-based security lab using Sysmon and Windows Event Logs to simulate 10 common attack techniques, including PowerShell abuse, persistence mechanisms, WMI execution, security control tampering, and ransomware-related activity.
+
+Each detection involved generating endpoint telemetry, analyzing security events, investigating attacker behavior, mapping techniques to MITRE ATT&CK, and documenting detection logic, investigation workflows, false positives, and response actions.
+
 ### 🔐 Windows 11 Upgrade & Endpoint Security Compliance Project
 
 Large-scale endpoint modernization initiative involving 100+ corporate devices. The project focused on identifying Windows 10 systems, validating hardware readiness (TPM, Secure Boot), and upgrading devices to Windows 11 to improve security compliance and reduce risk exposure.
