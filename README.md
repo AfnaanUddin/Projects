@@ -2,9 +2,9 @@
 
 ## Overview
 
-This repository contains a collection of cybersecurity and IT operations projects completed during my internship and independent hands-on learning.
+This repository contains a collection of Cybersecurity and IT operations projects completed during my internships and independent hands-on learning.
 
-These projects are based on real enterprise environments and focus on security operations activities such as endpoint management, identity security, system upgrades, SIEM analysis, and EDR-based investigations.
+These projects are based on real enterprise environments and focus on security operations activities such as Detection Engineering, Endpoint Management, Identity Security, System Upgrades, SIEM Analysis, and EDR-based investigations.
 
 The goal of this portfolio is to demonstrate practical experience working with enterprise security tools and workflows commonly used in SOC and endpoint security teams.
 
@@ -12,7 +12,7 @@ The goal of this portfolio is to demonstrate practical experience working with e
 
 ## Projects Included
 
-### 🔎 Enterprise Detection Engineering Lab – Windows | Sysmon | MITRE ATT&CK
+### 🔎 Enterprise Detection Engineering Lab
 
 Hands-on detection engineering project focused on understanding how enterprise SOC teams detect and investigate attacker behavior.
 
