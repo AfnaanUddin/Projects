@@ -61,8 +61,6 @@ The command line showed:
 
 powershell.exe -EncodedCommand
 
-Screenshot:
-
 ⸻
 
 Windows Security Event ID 4688 - Process Creation
@@ -75,7 +73,6 @@ Important information:
 * User account
 * Command line
 
-Screenshot:
 
 ⸻
 
@@ -84,8 +81,6 @@ PowerShell Event ID 4104 - Script Block Logging
 PowerShell logging captured the script content that was executed.
 
 This helps analysts understand what the encoded command actually performed.
-
-Screenshot:
 
 ⸻
 
