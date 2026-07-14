@@ -72,10 +72,6 @@ Get-MpPreference | Select-Object DisableRealtimeMonitoring
 
 ```
 
-Screenshot:
-
-![Defender Configuration](../Screenshots/Detection-09/defender-configuration.png)
-
 ---
 
 ### Sysmon Event ID 1 - Process Creation
@@ -91,10 +87,6 @@ Important information:
 - User account
 
 - Timestamp
-
-Screenshot:
-
-![Sysmon Event ID 1](../Screenshots/Detection-09/sysmon-event-id1.png)
 
 ---
 
