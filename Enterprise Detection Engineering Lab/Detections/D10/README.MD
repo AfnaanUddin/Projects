@@ -66,19 +66,11 @@ Important information:
 
 - Timestamp
 
-Screenshot:
-
-![Sysmon Event ID 1](../Screenshots/Detection-10/sysmon-event-id1.png)
-
 ---
 
 ### Shadow Copy Query
 
 The output of the `vssadmin list shadows` command was recorded to verify successful execution.
-
-Screenshot:
-
-![Shadow Copy Query](../Screenshots/Detection-10/attack-simulation.png)
 
 ---
 
