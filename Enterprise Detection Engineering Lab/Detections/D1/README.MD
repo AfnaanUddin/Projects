@@ -77,10 +77,6 @@ Shows PowerShell commands/scripts that were executed.
 
 ⸻
 
-Screenshots
-
-Screenshots included:
-
 PowerShell commands executed
 Sysmon Event ID 1
 Windows Security Event ID 4688
