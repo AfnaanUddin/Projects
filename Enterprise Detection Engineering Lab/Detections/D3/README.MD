@@ -48,15 +48,11 @@ Windows Security Event ID 4720 - User Account Created
 
 Windows recorded the creation of the new local user account.
 
-Screenshot:
-
 ⸻
 
 Windows Security Event ID 4732 - User Added to Administrators Group
 
 Windows recorded the new user being added to the local Administrators group.
-
-Screenshot:
 
 ⸻
 
@@ -64,7 +60,6 @@ Sysmon Event ID 1 - Process Creation
 
 Sysmon recorded the execution of the net user and net localgroup commands used to create the account and assign administrator privileges.
 
-Screenshot:
 
 ⸻
 
