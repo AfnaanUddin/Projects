@@ -55,7 +55,6 @@ Important information:
 * Logon type
 * Source information
 
-Screenshot:
 
 ⸻
 
@@ -68,8 +67,6 @@ Important information:
 * Account name
 * Logon type
 * Authentication details
-
-Screenshot:
 
 ⸻
 
