@@ -35,6 +35,8 @@ A Registry Run Key was created to automatically launch Notepad when the user log
 Command used: reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v SecurityLabRun /t REG_SZ /d "notepad.exe" /f
 This simulated how an attacker could create persistence using Windows Registry.
 
+_____
+
 Telemetry Generated
 
 Sysmon Event ID 13 - Registry Value Set
@@ -47,23 +49,13 @@ Important information:
 * Value created
 * Process responsible for the change
 
-elemetry Generated
-
-Sysmon Event ID 13 - Registry Value Set
-
-Sysmon detected the registry modification.
-
-Important information:
-
-* Registry path modified
-* Value created
-* Process responsible for the change
+_____
 
 Detection Logic:
 Monitor for changes to:
 HKCU\Software\Microsoft\Windows\CurrentVersion\Run and HKLM\Software\Microsoft\Windows\CurrentVersion\Run
 
-nvestigation Steps
+Investigation Steps
 
 1. Identify the registry key that was modified.
 2. Check what program was added.
