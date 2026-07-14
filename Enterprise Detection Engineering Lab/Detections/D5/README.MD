@@ -55,8 +55,6 @@ Important information:
 * User who created the task
 * Command/action being executed
 
-Screenshot:
-
 ⸻
 
 Sysmon Event ID 1 - Process Creation
@@ -70,7 +68,6 @@ Important fields:
 * Parent process
 * User account
 
-Screenshot:
 
 ⸻
 
